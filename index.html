@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login · Java & CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-card">
+        <h2>Welcome back</h2>
+        <div class="subhead">sign in to your account</div>
+
+        <form id="loginForm" novalidate>
+            <div class="input-group">
+                <label for="username">Email or username</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="e.g. alex@example.com" autocomplete="username">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="••••••••" autocomplete="current-password">
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn" id="loginButton">
+                <i class="fas fa-arrow-right-to-bracket"></i> Log in
+            </button>
+
+            <div id="messageBox" class="message-box" aria-live="polite"></div>
+        </form>
+
+        <div class="java-badge">
+            <i class="fab fa-java"></i> <span>powered by Java · demo</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
