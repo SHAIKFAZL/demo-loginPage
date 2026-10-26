@@ -1,0 +1,241 @@
+/* ---------- CSS Reset & Global Styles ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #0b1a2e 0%, #1d2f4a 100%);
+    padding: 1.5rem;
+}
+
+
+/* ---------- Card / Container ---------- */
+
+.login-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 2.5rem;
+    padding: 2.8rem 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.25s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ---------- Heading ---------- */
+
+.login-card h2 {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.35rem;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 20, 30, 0.5);
+}
+
+.login-card .subhead {
+    text-align: center;
+    color: #9bb5d4;
+    font-size: 0.95rem;
+    margin-bottom: 2.2rem;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+
+
+/* ---------- Input Groups ---------- */
+
+.input-group {
+    margin-bottom: 1.6rem;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    color: #d2e0f0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.45rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 1.1rem;
+    color: #6d8bb0;
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 3rem;
+    background: rgba(15, 28, 45, 0.75);
+    border: 1.5px solid rgba(80, 120, 170, 0.3);
+    border-radius: 1.2rem;
+    color: #f0f6ff;
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper input::placeholder {
+    color: #6e8aa8;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.input-wrapper input:focus {
+    border-color: #4b9eff;
+    background: rgba(12, 24, 40, 0.9);
+    box-shadow: 0 0 0 4px rgba(75, 158, 255, 0.2), inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-wrapper input:focus+i,
+.input-wrapper input:not(:placeholder-shown)+i {
+    color: #4b9eff;
+}
+
+
+/* ---------- Login Button ---------- */
+
+.login-btn {
+    width: 100%;
+    padding: 0.95rem;
+    margin-top: 0.75rem;
+    background: linear-gradient(135deg, #2a6fdb, #1e4f9e);
+    border: none;
+    border-radius: 1.2rem;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 20px -8px #0a1e3a, 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.login-btn i {
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #367ae8, #2359b0);
+    transform: scale(1.01);
+    box-shadow: 0 14px 25px -8px #0a1a30, 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+    background: linear-gradient(135deg, #1f5bc2, #143d7a);
+    box-shadow: 0 5px 12px -6px #000000;
+}
+
+
+/* ---------- Message / Feedback Area ---------- */
+
+.message-box {
+    min-height: 2.5rem;
+    margin-top: 1.4rem;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-radius: 0.8rem;
+}
+
+.message-box.error {
+    color: #ff9f9f;
+    background: rgba(220, 50, 50, 0.15);
+    padding: 0.7rem 0.5rem;
+    border-left: 4px solid #ff5e5e;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.message-box.success {
+    color: #b3ffcf;
+    background: rgba(50, 200, 120, 0.12);
+    padding: 0.7rem 0.5rem;
+    border-left: 4px solid #3ddb7c;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+
+/* ---------- Extra: small footer / java badge ---------- */
+
+.java-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 2.1rem;
+    color: #6d8bb0;
+    font-size: 0.75rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.java-badge i {
+    font-size: 1rem;
+    color: #e76f00;
+    /* java orange */
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 2rem 1.5rem;
+        border-radius: 2rem;
+    }
+    .login-card h2 {
+        font-size: 1.9rem;
+    }
+    .input-wrapper input {
+        padding: 0.8rem 1rem 0.8rem 2.8rem;
+        font-size: 0.95rem;
+    }
+    .input-wrapper i {
+        left: 0.9rem;
+        font-size: 1rem;
+    }
+}
